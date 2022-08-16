@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+/* 初始化浏览器样式 */
+* {
+    /* 清除内外边距 */
+    margin: 0;
+    padding: 0;
+    /* 开启盒模型 盒子宽高的计算方式为:内容＋内边距＋边框 */
+    box-sizing: border-box;
+    /* 清除a的下划线 */
+    text-decoration: none;
+    /* 不允许用户选中 */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* 更改a的默认颜色 */
+a {
+    color: #000;
+}
+
+body {
+    width: 375px;
+    margin: 0 auto;
+    font: normal 14px/1.2 Tahoma, 'Lucida Grande', Verdana, 'Microsoft Yahei', STXihei, hei;
+    color: #000;
+}
+
+
+
+/* 伪类清除浮动 */
+.clearfix:after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+    /* 兼容IE */
+}
+
+/* 单行文本溢出 */
+.overflow {
+    /* 溢出的内容不显示 */
+    overflow: hidden;
+    /* 文本溢出显示 省略号 ... */
+    text-overflow: ellipsis;
+    /* 不换行 */
+    white-space: nowrap;
+}
+
+/* 图片,input对齐方式 */
+img,
+input {
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* 不显示内边框线 */
+input,
+button {
+    outline: none;
+}
+
+/* li的样式 */
+ol,
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* font-size: 1.2em; */
+    font-weight: normal;
+}
+
+i,
+em {
+    font-style: normal;
+
+}

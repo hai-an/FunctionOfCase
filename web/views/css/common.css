@@ -1,0 +1,15 @@
+.large-container {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 376px;
+    height: 100%;
+    /* min-height: 100vh; */
+}
+
+/* 整体背景颜色 */
+body {
+    background-color: #f1f1f1;
+    height: 100vh;
+}

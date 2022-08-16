@@ -1,0 +1,195 @@
+/* 全局设置 */
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-between-col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+/* 头部导航栏 start */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 64px;
+  background-color: #446ADF;
+}
+.header .panel-em-se {
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  background: no-repeat center;
+  background-size: 32px 32px;
+}
+.header .email {
+  background-image: url(../images/邮件.png);
+}
+.header .logo {
+  width: 112px;
+  height: 64px;
+  line-height: 64px;
+  background: url(../images/headerLogo.png) no-repeat center;
+  text-indent: -99999px;
+  font-size: 38px;
+}
+.header .search {
+  background-image: url(../images/放大镜.jpg);
+}
+/* 头部导航栏 end */
+/* 公共部分 */
+.panel {
+  margin-top: 16px;
+  background-color: #fff;
+}
+.panel .panel-tit {
+  position: relative;
+  width: 100px;
+  height: 38px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #446ADF;
+  text-align: center;
+  line-height: 38px;
+}
+.panel .panel-tit::before,
+.panel .panel-tit::after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  line-height: 38px;
+  background-color: #446adf;
+  border-radius: 50%;
+}
+.panel .panel-tit::before {
+  float: left;
+}
+.panel .panel-tit::after {
+  float: right;
+}
+/* 主体区域 start */
+.main {
+  padding: 64px 0 58px;
+  width: 100%;
+  height: 100%;
+  /* 超出部分隐藏 */
+  overflow: auto;
+  /* 文本尺寸 */
+}
+.main::-webkit-scrollbar {
+  display: none;
+}
+.main .main-coniner {
+  width: 100%;
+  height: 1900px;
+  /* banner 广告start */
+  /* banner 广告end */
+  /* 就业课 */
+  /* 微课 */
+}
+.main .main-coniner .banner {
+  width: 100%;
+  height: 170px;
+  background-color: #020721;
+}
+.main .main-coniner .banner .banner-img {
+  width: 100%;
+  height: 170px;
+  background: url(../images/FE.png) no-repeat center;
+  background-size: 375px 170px;
+}
+.main .main-coniner .employmentCourse {
+  width: 100%;
+  height: 262px;
+  /* 就业课内容 */
+}
+.main .main-coniner .employmentCourse .employmentCourse-container {
+  /* 行 */
+}
+.main .main-coniner .employmentCourse .employmentCourse-container div[class^=row] {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 102px;
+  /* 列 */
+}
+.main .main-coniner .employmentCourse .employmentCourse-container div[class^=row] [class^=item] {
+  display: flex;
+  justify-content: center;
+  width: 33%;
+}
+.main .main-coniner .employmentCourse .employmentCourse-container div[class^=row] [class^=item] .item-pic {
+  width: 70px;
+  height: 70px;
+  background-color: pink;
+  border-radius: 50%;
+  text-align: center;
+}
+.main .main-coniner .microClass {
+  width: 100%;
+  /* 微课内容区域 */
+}
+.main .main-coniner .microClass .microClass-container {
+  padding: 0 6px;
+  display: flex;
+  flex-wrap: wrap;
+  /* 列 */
+}
+.main .main-coniner .microClass .microClass-container > div:nth-child(odd) {
+  margin-right: 10px;
+}
+.main .main-coniner .microClass .microClass-container > [class^=item] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 48%;
+}
+.main .main-coniner .microClass .microClass-container > [class^=item] .item-pic {
+  width: 178px;
+  height: 100px;
+  background-color: pink;
+  border-radius: 5px;
+}
+.main .main-coniner .microClass .microClass-container > [class^=item] .item-text .item-tit {
+  font-size: 16px;
+  color: #333;
+  text-indent: 5px;
+}
+.main .main-coniner .microClass .microClass-container > [class^=item] .item-text .item-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.main .main-coniner .microClass .microClass-container > [class^=item] .item-text .item-info .item-info-study {
+  color: #d0d0d0;
+}
+.main .main-coniner .microClass .microClass-container > [class^=item] .item-text .item-info .item-info-price {
+  color: #446ADF;
+}
+/* 主体区域 end */
+/* footer 底部导航栏 start */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 58px;
+  padding: 0 40px;
+  background-color: #fff;
+}
+.footer .footer-icon {
+  height: 58px;
+  color: #28abfc;
+}
+.footer .footer-icon > div h4 {
+  font-size: 14px;
+  color: #28abfc;
+}
+/* footer 底部导航栏 end */

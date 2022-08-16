@@ -1,0 +1,265 @@
+/* 全局设置 */
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-between-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 头部导航栏 start */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 64px;
+    background-color: #446ADF;
+
+    .panel-em-se {
+        width: 64px;
+        height: 64px;
+        line-height: 64px;
+        background: no-repeat center;
+        background-size: 32px 32px;
+
+    }
+
+    .email {
+        background-image: url(../images/邮件.png);
+    }
+
+    .logo {
+        width: 112px;
+        height: 64px;
+        line-height: 64px;
+        background: url(../images/headerLogo.png) no-repeat center;
+        text-indent: -99999px;
+        font-size: 38px;
+    }
+
+    .search {
+        background-image: url(../images/放大镜.jpg);
+
+    }
+}
+
+/* 头部导航栏 end */
+
+
+
+/* 公共部分 */
+.panel {
+    margin-top: 16px;
+    background-color: #fff;
+
+    .panel-tit {
+        position: relative;
+        width: 100px;
+        height: 38px;
+        margin: 0 auto;
+        font-size: 18px;
+        color: #446ADF;
+        text-align: center;
+        line-height: 38px;
+
+        &::before,
+        &::after {
+            content: '';
+            // position: absolute;
+            // left: 0;
+            // top: 0;
+
+            width: 4px;
+            height: 4px;
+            line-height: 38px;
+            background-color: #446adf;
+            border-radius: 50%;
+        }
+
+        &::before {
+            float: left;
+        }
+
+        &::after {
+            float: right;
+        }
+    }
+}
+
+/* 主体区域 start */
+.main {
+    padding: 64px 0 58px;
+    width: 100%;
+    // height: calc(100% - 64px - 58px);
+    height: 100%;
+    /* 超出部分隐藏 */
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+
+
+    .main-coniner {
+        width: 100%;
+        height: 1900px;
+        // overflow: auto;
+
+        /* banner 广告start */
+        .banner {
+            width: 100%;
+            height: 170px;
+            background-color: #020721;
+
+            .banner-img {
+                width: 100%;
+                height: 170px;
+                background: url(../images/FE.png) no-repeat center;
+                background-size: 375px 170px;
+
+            }
+
+        }
+
+        /* banner 广告end */
+        /* 就业课 */
+        .employmentCourse {
+            width: 100%;
+            height: 262px;
+
+            /* 就业课内容 */
+            .employmentCourse-container {
+
+                /* 行 */
+                div[class^=row] {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 102px;
+                    // background: gold;
+
+                    /* 列 */
+                    [class^=item] {
+                        display: flex;
+                        justify-content: center;
+                        width: 33%;
+
+                        .item-pic {
+                            width: 70px;
+                            height: 70px;
+                            background-color: pink;
+                            border-radius: 50%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        /* 微课 */
+        .microClass {
+            width: 100%;
+
+            /* 微课内容区域 */
+            .microClass-container {
+                padding: 0 6px;
+                display: flex;
+                flex-wrap: wrap;
+
+
+                /* 列 */
+                &>div:nth-child(odd) {
+                    margin-right: 10px;
+                }
+
+                &>[class^=item] {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 48%;
+
+                    .item-pic {
+                        width: 178px;
+                        height: 100px;
+                        background-color: pink;
+                        border-radius: 5px;
+                    }
+
+                    .item-text {
+
+                        .item-tit {
+                            font-size: 16px;
+                            color: #333;
+                            text-indent: 5px;
+                        }
+
+                        .item-info {
+                            display: flex;
+
+                            justify-content: space-between;
+                            font-size: 14px;
+
+                            .item-info-study {
+                                color: #d0d0d0;
+                            }
+
+                            .item-info-price {
+                                color: #446ADF;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+
+
+
+
+
+    /* 文本尺寸 */
+
+
+}
+
+/* 主体区域 end */
+
+
+/* footer 底部导航栏 start */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+    padding: 0 40px;
+    background-color: #fff;
+
+    .footer-icon {
+        height: 58px;
+        color: #28abfc;
+
+        &>div {
+
+            h4 {
+                font-size: 14px;
+                color: #28abfc;
+                // text-align: center;
+            }
+        }
+    }
+}
+
+/* footer 底部导航栏 end */

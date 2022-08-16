@@ -1,0 +1,211 @@
+/* 全局设置 */
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-between-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 头部导航栏 start */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 66px;
+    background-color: #fff;
+    line-height: 66px;
+
+    .logo {
+        width: 112px;
+        height: 66px;
+        margin-right: 40px;
+        background: url(../images/logo.png) no-repeat center;
+        background-size: contain;
+        text-indent: -99999px;
+        font-size: 38px;
+    }
+
+    .tit {
+        font-size: 26px;
+        color: #28abfc;
+        font-weight: 700;
+        height: 66px;
+
+    }
+
+}
+
+/* 头部导航栏 end */
+
+
+
+/* 公共部分 */
+.panel {
+
+    background-color: #fff;
+
+    .panel-tit {
+        position: relative;
+        height: 18px;
+        font-size: 18px;
+        color: #28abfc;
+        font-weight: 550;
+    }
+}
+
+/* 主体区域 start */
+.main {
+    margin: 64px 0 58px;
+    padding-top: 16px;
+    width: 100%;
+    // height: calc(100% - 64px - 58px);
+    height: 100%;
+    /* 超出部分隐藏 */
+    // overflow: auto;
+
+    // &::-webkit-scrollbar {
+    //     display: none;
+    // }
+
+    /* 开启弹性盒模型 */
+    display: flex;
+
+    .sidebar {
+        width: 95px;
+        height: 100%;
+        background-color: #f5f5f5;
+        // overflow: hidden;
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .sidebar-item {
+            height: 110%;
+
+            li {
+                height: 56px;
+                line-height: 56px;
+                color: #333;
+                font-size: 16px;
+                text-align: center;
+
+                &.active {
+                    background-color: #fff;
+                    border-left: 2px solid #28abfc;
+                }
+            }
+        }
+    }
+
+    .main-coniner {
+        flex: 1;
+        height: 1000px;
+        background-color: #fff;
+        padding-top: 10px;
+        padding-left: 17px;
+        padding-right: 2px;
+
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .main-coniner-box {
+            height: 120%;
+        }
+
+        /* 就业班 */
+        .lesson-jiuye {
+
+            /* 广告图 */
+            .advertisement {
+                position: relative;
+                margin: 12px 0;
+
+                .advertisement_name {
+                    position: absolute;
+                    width: 160px;
+                    height: 32px;
+                    bottom: 20px;
+                    left: 35px;
+                    font-size: 18px;
+                    color: #fff;
+                }
+            }
+
+        }
+
+        /* 提高课 */
+        .lesson-tigao {
+            padding-right: 35px;
+
+            .skill {
+                display: flex;
+                flex-wrap: wrap;
+
+                .skill_name {
+                    height: 36px;
+                    margin: 20px 10px 0 0;
+                    padding: 0 15px;
+                    border: 1px solid #ccc;
+                    line-height: 36px;
+                    font-size: 14px;
+                    color: #c0c0c0;
+                    border-radius: 5px;
+                }
+            }
+
+        }
+
+
+    }
+
+
+
+
+
+    /* 文本尺寸 */
+
+
+}
+
+/* 主体区域 end */
+
+
+/* footer 底部导航栏 start */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+    padding: 0 40px;
+    background-color: #fff;
+
+    .footer-icon {
+        height: 58px;
+        color: #28abfc;
+
+        &>div {
+
+            h4 {
+                font-size: 14px;
+                color: #28abfc;
+                // text-align: center;
+            }
+        }
+    }
+}
+
+/* footer 底部导航栏 end */
